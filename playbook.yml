@@ -1,0 +1,8 @@
+- name: Provision Web Server
+  hosts: webservers
+  become: true
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
